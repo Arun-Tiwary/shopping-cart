@@ -1,0 +1,74 @@
+@import "/src/colorcode.css";
+/* 
+  .brand-name{
+
+    display: initial;
+    margin: 4px;
+
+  }
+
+  .header-icons{
+    display: inline-block;
+  }
+
+  .header-icons{
+    margin:2px;
+  } */
+
+
+  .header{
+    background-color: var(--background2);
+    max-height: 70px;
+    color: var(--text2);
+    display: grid;
+    /* grid-template-columns: .6fr 2fr 7fr 1fr 1fr 1fr  ; */
+    grid-template-columns: 60px 85px auto 80px 80px 90px ;
+   
+}
+
+.icon{
+    margin-left: 30px;
+    align-items: center;
+}
+
+.brand-logo{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+
+.search{
+   
+  border-radius: 42px;
+  border-color: var(--text2);  
+}
+
+.badge-icon1{
+  position: absolute;
+  color: #242222;
+  right: 181px;
+  top: 114px;
+  background-color: red;
+  width: 24px;
+  border-radius: 300%;
+  font-weight: 700;
+  margin: 1px;
+  padding: 1px;
+  text-align: center;
+}
+
+.badge-icon2{
+  position: absolute;
+  color: #242222;
+  right: 101px;
+  top: 114px;
+  background-color: red;
+  width: 24px;
+  border-radius: 300%;
+  font-weight: 700;
+  margin: 1px;
+  padding: 1px;
+  text-align: center;
+}
