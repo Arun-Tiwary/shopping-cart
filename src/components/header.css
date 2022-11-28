@@ -39,5 +39,22 @@
 
 
   .header{
+    background-color: var(--background2);
+    max-height: 50px;
+    color: var(--text2);
     display: grid;
-  }
+    grid-template-columns: .6fr 2fr 7fr 1fr 1fr 1fr  ;
+    justify-content: center;
+    align-content: center;
+}
+
+.icon{
+    margin-left: 30px;
+}
+
+.brand-logo{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    align-self: center;
+}
