@@ -1,17 +1,26 @@
-
+import { Routes, Route} from "react-router-dom";
 import './App.css';
+
 import Header from './components/Header/header';
-import Grid from './components/tets/test';
+import Home from "./components/home";
+import Cart from "./components/cart";
+
+
 
 function App() {
   return (
-    <div className="App">
+  <div className="App">
+     <Header />
+      <Routes>
+        <Route path = "/"  element ={<Home />} exact />
+        <Route path = "/cart"  element ={<Cart />} exact />
+     
+       </Routes>
 
-      <Grid />
-     <h1>sdcddd</h1>
-    <Header />  
-    </div>
-  );
+  
+  </div>
+  
+  )
 }
 
 export default App;

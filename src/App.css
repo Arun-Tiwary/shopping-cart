@@ -1,6 +1,6 @@
 @import "./components/Header/header.css";
 
-@import "./components/tets/test.css";
+@import "./components/test/test.css";
 
 ::placeholder { 
     position:relative;

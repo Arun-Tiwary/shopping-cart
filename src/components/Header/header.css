@@ -1,20 +1,4 @@
 @import "/src/colorcode.css";
-/* 
-  .brand-name{
-
-    display: initial;
-    margin: 4px;
-
-  }
-
-  .header-icons{
-    display: inline-block;
-  }
-
-  .header-icons{
-    margin:2px;
-  } */
-
 
   .header{
     background-color: var(--background2);
@@ -29,6 +13,7 @@
 .icon{
     margin-left: 30px;
     align-items: center;
+    background-color: var(--background2);
 }
 
 .brand-logo{
@@ -46,10 +31,10 @@
 }
 
 .badge-icon1{
-  position: absolute;
+  position: fixed;
   color: #242222;
   right: 181px;
-  top: 114px;
+  top: 2px;
   background-color: red;
   width: 24px;
   border-radius: 300%;
@@ -60,10 +45,10 @@
 }
 
 .badge-icon2{
-  position: absolute;
+  position: fixed;
   color: #242222;
   right: 101px;
-  top: 114px;
+  top: 2px;
   background-color: red;
   width: 24px;
   border-radius: 300%;
