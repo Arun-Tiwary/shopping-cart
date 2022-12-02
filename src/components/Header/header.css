@@ -1,41 +1,57 @@
 @import "/src/colorcode.css";
 
   .header{
-    background-color: var(--background2);
+    background-color: var(--background1);
     max-height: 70px;
-    color: var(--text2);
+    color: var(--text1);
     display: grid;
     /* grid-template-columns: .6fr 2fr 7fr 1fr 1fr 1fr  ; */
-    grid-template-columns: 60px 85px auto 80px 80px 90px ;
-   
-}
-
-.icon{
-    margin-left: 30px;
-    align-items: center;
-    background-color: var(--background2);
+    grid-template-columns: 60px 85px auto 100px 80px 90px ;   
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .brand-logo{
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 50%;
-    align-self: center;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  align-self: center;
 }
-
 
 .search{
-   
-  border-radius: 42px;
-  border-color: var(--text2);  
+  margin-left: 170px;
+   background-color: var(--search-bgColor);
+  border-radius: 42px; 
+  border-width: 0.000001px;
+    border-block-color: white;
+    border-inline-color: unset; 
 }
 
-.badge-icon1{
-  position: fixed;
-  color: #242222;
-  right: 181px;
-  top: 2px;
-  background-color: red;
+.search ::selection{
+  border-block-color: aqua;
+  border-inline-color: gray;
+}
+
+.icon{
+    
+    justify-items: end;
+    align-items: center;
+    background-color: var(--background1);
+}
+
+
+.icon-color{
+  font-size: 30px;
+  color: var(--text1);
+}
+
+.badge-icon1{ 
+  position: relative;
+  color: var(--badge-icon-color);
+  right: 72px;
+  top: -15px;
+  background-color: var(--badge-icon-bgColor);
   width: 24px;
   border-radius: 300%;
   font-weight: 700;
@@ -45,11 +61,11 @@
 }
 
 .badge-icon2{
-  position: fixed;
+  position: relative;
   color: #242222;
-  right: 101px;
-  top: 2px;
-  background-color: red;
+  right: 51px;
+  top: -15px;
+  background-color: rgb(0, 255, 200);
   width: 24px;
   border-radius: 300%;
   font-weight: 700;
@@ -57,3 +73,5 @@
   padding: 1px;
   text-align: center;
 }
+
+

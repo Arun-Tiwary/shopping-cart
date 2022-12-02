@@ -1,10 +1,22 @@
 @import "./components/Header/header.css";
-
 @import "./components/test/test.css";
-
+@import "./components/Home/home.css";
+@import "./components/Filters/filters.css";
+@import "./colorcode.css";
+@import "./components/ProductCard/productCard.css";
 ::placeholder { 
     position:relative;
-    color: var(--text2);
+    color: var(--text1);
+    font-size: larger;
+    
    
 
+}
+
+body{
+    font-family:  Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;;
+}
+
+a{
+    text-decoration: none ;
 }

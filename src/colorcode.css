@@ -1,10 +1,23 @@
 :root{
     --background1: #F7F7F7;
-    --tex1: #222222;
-    --text2of1: #232345;
     --background2: #333333;
+    --background3: #34495e;
+    --background4: orange;
+    --background4: #6184a8;
+    /* --tex1: #222222; */
+    --text1: #646F7B;
+    --text2of1: #232345;
+    
     --text2: #E6E6E6;
-    --primarybutton1: #147CE5;
-    --secondarybutton1: #E11C2A;
+    --primaryButton1: #147CE5;
+    --secondaryButton1: #E11C2A;
+    --badge-icon-bgColor: #ff6161;
+    --badge-icon-color: #f0f0f0;
+    --search-bgColor: #EBEBEB;
 
 }
+
+
+/* body{
+    font-family:  Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;;
+} */
