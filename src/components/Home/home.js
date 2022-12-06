@@ -6,8 +6,7 @@ import ProductCard from '../ProductCard/productCard';
 const Home = () => {
 
     const {state} = useCart();
-
-    console.log(state.products)
+    console.log(state.products);
 
   return (
  <>
@@ -18,12 +17,13 @@ const Home = () => {
 
 
       <div className='product-container'>
-        {
-        state.products.map((item) => {
-          return <ProductCard product = {item} />
+        
+          {
+          state.products.map((item) => {
+            return <ProductCard product = {item} />
 
-        } )
-        }
+          } )
+          }
 
       </div>
 

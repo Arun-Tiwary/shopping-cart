@@ -10,9 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <CartContext>
     <BrowserRouter>
-    <App />
+      <App />
     </BrowserRouter>
-    </CartContext>
+  </CartContext>
     
 );
 
