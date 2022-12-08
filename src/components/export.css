@@ -1,0 +1,8 @@
+@import "./Header/header.css";
+@import "./test/test.css";
+@import "./Home/home.css";
+@import "./Filters/filters.css";
+@import "../colorcode.css";
+@import "./ProductCard/productCard.css";
+@import "./Cart/cart.css";
+@import "./Footer/footer.css";

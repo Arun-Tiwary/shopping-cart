@@ -1,0 +1,31 @@
+.cart{
+    align-items: center !important;
+    flex-direction: column !important;
+}
+
+.clear-cart-button{
+    border-radius: 20px;
+    position: fixed;
+    margin-left: 92%;
+    padding: 15px;
+    margin-top: 5px;
+}
+
+.cart-increment-button{
+    width: 28px;
+    height: 28px;
+    background: var(--background3);
+    display: inline-block;
+    border: 1px solid #9b4b4b;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+    
+    
+}
+
+.cart-price{
+    display: inline-block;
+    margin: 7px;
+    font-size: medium;
+}

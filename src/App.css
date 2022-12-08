@@ -1,9 +1,5 @@
-@import "./components/Header/header.css";
-@import "./components/test/test.css";
-@import "./components/Home/home.css";
-@import "./components/Filters/filters.css";
-@import "./colorcode.css";
-@import "./components/ProductCard/productCard.css";
+
+@import "./components/export.css";
 ::placeholder { 
     position:relative;
     color: var(--text1);

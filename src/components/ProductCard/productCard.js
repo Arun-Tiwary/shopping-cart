@@ -34,12 +34,7 @@ const ProductCard = ({product}) => {
       Add to cart
       </button>)
       }
-{/* 
-      <button onClick={()=>dispatch({type:"ADD_TO_CART", payload: product})}>Add to cart</button> */}
-      {/* <button onClick={()=>dispatch({type:"REMOV_FROM_CART", payload: product})}>re to cart</button> */}
-     
-      
-      </p>
+    </p>
   </div>
 
 </div>

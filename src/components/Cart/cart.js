@@ -1,30 +1,28 @@
 import React from 'react'
 import { useCart } from '../../Context/context'
+import CartCard from './cartCard';
+import Nothing from './nothing';
 
 const Cart = () => {
 
-  const {state} = useCart();
+  const {state, dispatch} = useCart();
   console.log(state.cart)
   return (
-<div>
-         {
+<div> 
+        <button  onClick = {()=>dispatch({type: "CLEAR_CART"})}
+        className='card-button clear-cart-button'>Clear Cart</button>
+       
+        {
+
           state.cart.map((cartItem)=>{
             return (
           <>
-              <li>
-                
-                {cartItem.name}
-
-              </li>
-               <li>
-                
-               $ {cartItem.price}
-
-             </li>
+            {cartItem.qty < 1 ? (<Nothing/>) : <CartCard cartItem = {cartItem}/> }
+             
           </>
             )
           })
-         }
+        }
          
     
 </div>
