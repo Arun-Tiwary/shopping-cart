@@ -3,12 +3,20 @@
     flex-direction: column !important;
 }
 
-.clear-cart-button{
-    border-radius: 20px;
+.clear-cart{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
     position: fixed;
-    margin-left: 92%;
-    padding: 15px;
+    margin-left: 82%;
+    padding: 20px;
     margin-top: 5px;
+    background-color: var(--background4);
+    color: var(--text2);
+    align-items: center;
+}
+.clear-cart>button{
+    padding: 8px;
 }
 
 .cart-increment-button{
@@ -29,3 +37,20 @@
     margin: 7px;
     font-size: medium;
 }
+
+.empty-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0;
+    color: var(--text3);
+}
+
+.empty-cart-image{
+    
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+}
+

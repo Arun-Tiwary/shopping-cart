@@ -28,3 +28,11 @@ export const CartReducer = (state, action) =>{
     };
     
 };
+
+
+export const FilterReducer = () => {
+  return (
+    <div>FilterReducer</div>
+  )
+}
+

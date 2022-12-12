@@ -3,6 +3,7 @@ import { createContext } from 'react';
 import { useReducer } from 'react';
 import products from '../data'
 import { CartReducer } from './reducer';
+import { FilterReducer } from './reducer';
 
 // export const CartState = () =>{
 //     return useContext(Cart) ;
@@ -21,9 +22,17 @@ const CartContext = ({children}) => {
     cart:[]
    })
 
+   const [filterState, filterDispatch] = useReducer(FilterReducer,{
+    isSoterd: false,
+    isInStock: false,
+    isFastDelivery: true,
+    IsRating: "",
+    ClearFilters: []
+   })
+
   return (
     <div>
-        <Cart.Provider value = {{state, dispatch}}>
+        <Cart.Provider value = {{state, dispatch, filterState, filterDispatch}}>
             {children}
         </Cart.Provider>
     </div>
