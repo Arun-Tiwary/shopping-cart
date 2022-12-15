@@ -13,29 +13,26 @@ const Cart = () => {
 
   console.log(state.cart)
   return (
-<div>  <div className='clear-cart' >
-       <p className=''> Cart Value:   $ {total} </p>
-        { state.cart.length > 0 &&
+
+<div> 
+    { state.cart.length > 0 && 
+      <div className='clear-cart' >  
+        <p className=''> Cart Value:   $ {total} </p>
         <button  onClick = {() => dispatch({type: "CLEAR_CART"})}
-        className='card-button '>Clear Cart  </button>
-        }
-       </div>
-        {
-          state.cart.length === 0 ? <Nothing/> :
-
-          state.cart.map((cartItem) => {
-            return (
+        className='card-button '>Clear Cart  </button>   
+     </div>
+    }
+    {
+      state.cart.length === 0 ? <Nothing/> : state.cart.map((cartItem) => {
+          return (
           <>
-            { <CartCard cartItem = {cartItem}/> }
-             
+            { <CartCard cartItem = {cartItem}/> } 
           </>
-            )
+            );
           })
-        }
-         
-    
+        };   
 </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

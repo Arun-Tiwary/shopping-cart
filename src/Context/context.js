@@ -23,11 +23,11 @@ const CartContext = ({children}) => {
    })
 
    const [filterState, filterDispatch] = useReducer(FilterReducer,{
-    isSoterd: false,
-    isInStock: false,
-    isFastDelivery: true,
-    IsRating: "",
-    ClearFilters: []
+    bySort: false,
+    byStock: false,
+    byFastDelivery: false,
+    byRating: 0,
+    bySearch: ""
    })
 
   return (

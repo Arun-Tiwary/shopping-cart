@@ -7,7 +7,7 @@ import { useCart } from "../../Context/context";
  
  function Header () {
 
-  const {state:{cart}} = useCart();
+  const {state:{cart}, filterDispatch} = useCart();
   const cartValue = cart.length;
   const notificationValue = 0;
  
@@ -23,7 +23,9 @@ import { useCart } from "../../Context/context";
              <h5 className=" header brand-name"> OCEANARE </h5>
           </Link>
 
-          <input className=" header search" placeholder="Search a product" />
+          <input className=" header search" placeholder="Search a product" 
+            onChange={(e) => filterDispatch({type: "FILTER_BY_SEARCH", payload: e.target.value })}
+            />
          
           <i className=" header icon"> 
             <Link  to ="/cart">

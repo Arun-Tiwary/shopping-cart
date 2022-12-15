@@ -1,10 +1,12 @@
 import React from 'react'
 import Rating from './rating';
-import { useState } from 'react';
+import { useCart } from '../../Context/context';
 
 const Filters = () => {
-    const[rating, setRating] = useState()
-  return (
+    
+    const { filterState : { bySort, byStock, byFastDelivery, byRating, bySearch }, filterDispatch } = useCart();
+  console.log("bySort", bySort,  "byRating",byRating, "byStock",byStock, "byFastDelivery", byFastDelivery, "byRating",byRating, bySearch);
+    return (
    
 <div className="filters">
     <span className="title">Filter Products</span>
@@ -15,6 +17,8 @@ const Filters = () => {
                 name="group1"
                 type="radio"
                 id="inlin-1"
+                onChange={ () => { filterDispatch({type: "SORT_BY_PRICE", payload: "lowToHigh" }) } }
+                checked = { bySort ===  "lowToHigh" ? true : false }
             >     
             </input>
             <label>Ascending</label>
@@ -27,51 +31,53 @@ const Filters = () => {
                 name="group1"
                 type="radio"
                 id="inline-2"
+                onChange={ () => { filterDispatch({ type: "SORT_BY_PRICE", payload: "highToLow" }) } }
+                checked = { bySort ==="highToLow" ? true : false }
             >
             </input>
             <label>Descending</label>
         </span>
 
-        <span>
+        {/* <span>
             <input
                 inline
                 label="include-out-of-stock"
                 name="group1"
                 type="checkbox"
                 id="inline-3"
+                onChange={ () => { filterDispatch({ type:"FILTER_BY_STOCK", }) } }
+                checked = {byStock}
             >
             </input>
             <label>Include out of stock</label>
-        </span>
+        </span> */}
 
-        <span>
+        {/* <span>
             <input
                 inline
                 label="fast-delivery"
                 name="group1"
                 type="checkbox"
                 id="inline-4"
+                onChange={ () => { filterDispatch({type:"FILTER_BY_FAST_DELIVERY", }) } }
+                checked = {byFastDelivery}
             >
-            </input>
+            </input> 
             <label>Fast Delivery</label>
-        </span>
+        </span> */}
 
         <span>
         <label>Rating</label>
-            <Rating rating = {rating} 
-            onClick = {(index)=>setRating(index + 1)} style ={{cursor:"pointer"}} 
+            <Rating rating = {byRating} 
+            onClick = { (i) => filterDispatch({
+                type: "FILTER_BY_RATING",
+                payload: i+1
+            })} style ={ { cursor:"pointer" } } 
             />
         </span>
     
-    <button className = "card-button filter-button" style = {{cursor : "pointer"}}>Clear Filters</button>
-
-
-
-
-
-
-
-
+    <button  onClick={()=>filterDispatch({type:"CLEAR_FILTERS", })}
+    className = "card-button filter-button" style = {{cursor : "pointer"}}>Clear Filters</button>
 
 
 </div>

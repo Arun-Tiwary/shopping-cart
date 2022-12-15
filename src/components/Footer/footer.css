@@ -1,6 +1,6 @@
 @import "/src/colorcode.css";
 .footer{
-    background-color: hwb(0 87% 5%);
+    /* background-color: hwb(0 87% 5%); */
 
     /* display: flex;
     bottom: 0;
@@ -12,9 +12,15 @@
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #efefef;
+  /* background-color: #efefef; */
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
+  height: 20px;
 
 
+}
+
+hr { 
+background-color: var(--background1);
+margin: 0 !important;
 }

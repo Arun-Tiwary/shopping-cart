@@ -5,8 +5,37 @@ import ProductCard from '../ProductCard/productCard';
 
 const Home = () => {
 
-    const {state} = useCart();
-    console.log(state.products);
+    const {state: {products},  filterState : { bySort, byStock, byFastDelivery, byRating, bySearch }} = useCart();
+    console.log("gome page",byStock, byFastDelivery);
+
+    const transformedProducts = () => {
+
+      let sortedProducts = products
+
+      if (bySort) {
+        sortedProducts = sortedProducts.sort((a,b) => bySort === "lowToHigh" ? a.price - b.price : b.price -a.price)
+      }
+
+      // if (! byStock) {
+
+      //   sortedProducts = sortedProducts.filter((item) => item.inStock)
+      // }
+
+      // if (byFastDelivery) {
+      //    sortedProducts = sortedProducts.filter((item) => item.byFastDelivery  )
+      // }
+
+      if (byRating) {
+        sortedProducts = sortedProducts.filter((item) => item.rating >= byRating)
+      }
+
+      if (bySearch) {
+        sortedProducts = sortedProducts.filter((item) => item.name.toLowerCase().includes(bySearch))
+      }
+
+      return sortedProducts
+
+    }
 
   return (
  <>
@@ -19,7 +48,7 @@ const Home = () => {
       <div className='product-container'>
         
           {
-          state.products.map((item) => {
+          transformedProducts().map((item) => {
             return <ProductCard product = {item} />
 
           } )
